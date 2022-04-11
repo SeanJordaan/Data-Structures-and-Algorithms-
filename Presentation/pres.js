@@ -1,6 +1,6 @@
 //Hashing//
 
-var has = (string, max) => { //This is the Hash Function//
+var hash = (string, max) => { //This is the Hash Function//
     var hash = 0;
     for (var i = 0; i < string.lenth; i++) {
         hash += string.charCodeAt(i);
@@ -67,22 +67,28 @@ let HashTable = function () {
 
 };
 
-console.log(hash('beau', 10));
 
-let ht = newHashTable();
+
+let ht = new HashTable();
 ht.add('beau', 'person');
 ht.add('fido', 'dog');
 ht.add('rex', 'dinosour');
 ht.add('frikkie', 'penguin');
-console.log(ht.lookup('frikkie'))
+console.log(ht.lookup('frikkie'));
 ht.print();
 
+console.log(hash('beau', 10));
+
 function run() {
-    var nums = [6, 10, 1, 9, 4, 8, 2, 7, 3, 5];
-    console.log(nums);
-    console.log();
-    mergeSort(nums);
-    console.log();
-    console.log(nums);
+    let ht = new HashTable();
+    ht.add('beau', 'person');
+    ht.add('fido', 'dog');
+    ht.add('rex', 'dinosour');
+    ht.add('frikkie', 'penguin');
+    console.log(ht.lookup('frikkie'));
+    ht.print();
+    console.log(hash('beau', 10));
 }
+
+
 
